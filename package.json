@@ -1,0 +1,19 @@
+{
+  "name": "share",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm install && cd .. && cd client && npm install && npm run build && cd .. && cd server && node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doriandres/share.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doriandres/share/issues"
+  },
+  "homepage": "https://github.com/doriandres/share#readme",
+  "description": ""
+}

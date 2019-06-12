@@ -7,7 +7,9 @@ const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
 
 
-const dbUrl = "mongodb://localhost:27017/Share"; 
+// const dbUrl = "mongodb://localhost:27017/Share";
+const dbUrl = 'mongodb://share:atlasda3571@share-shard-00-00-gbdow.azure.mongodb.net:27017,share-shard-00-01-gbdow.azure.mongodb.net:27017,share-shard-00-02-gbdow.azure.mongodb.net:27017/test?ssl=true&replicaSet=share-shard-0&authSource=admin&retryWrites=true&w=majority';
+
 const app = express();
 const server = http.Server(app);
 const registry = require('./route/routeRegistry');
@@ -43,5 +45,10 @@ app.use((req, res, next) => {
 
 mongoose.connect(dbUrl, () => {
     console.log('Connected to MongoDB')
-    server.listen(3000, () => console.log('App running in http://localhost:3000'));
+    server.listen(process.env.PORT || 3000, () => console.log('App running in http://localhost:3000'));
 });
+
+mongoose.connection.on('error', (err) => {
+    console.clear();
+    console.error('There was an error connecting:' + err);
+  });
