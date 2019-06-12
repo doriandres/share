@@ -1,5 +1,5 @@
 export const saveUser = async function(userData){
-    let response = await fetch('http://localhost:3000/api/user/save', {
+    let response = await fetch('/api/user/save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export const saveUser = async function(userData){
 }
 
 export const savePost = async function(postData){
-    let response = await fetch('http://localhost:3000/api/post/save', {
+    let response = await fetch('/api/post/save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ export const savePost = async function(postData){
 }
 
 export const validateUser = async function(userData){
-    let response = await fetch('http://localhost:3000/api/user/validate', {
+    let response = await fetch('/api/user/validate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

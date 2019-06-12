@@ -127,12 +127,12 @@ export default class PostCreator extends connect(store)(LitElement) {
                             Share
                         </vaadin-button>
                     </vaadin-horizontal-layout>
-                     <vaadin-upload accept="image/*" maxFiles="1" target="http://localhost:3000/api/image/save" @upload-request="${this.uploadRequest}" @upload-success="${this.uploadResponse}" @file-remove="${this.removeFile}"></vaadin-upload>
+                     <vaadin-upload accept="image/*" maxFiles="1" target="/api/image/save" @upload-request="${this.uploadRequest}" @upload-success="${this.uploadResponse}" @file-remove="${this.removeFile}"></vaadin-upload>
                     ${
                         this.showImagePreview ? 
                             html`
                                 <div style="text-align:center;">
-                                    <img style="max-width:100%; max-height:250px;" src=${`http://localhost:3000/api/image/${this.imagePreviewSource}`}>
+                                    <img style="max-width:100%; max-height:250px;" src=${`/api/image/${this.imagePreviewSource}`}>
                                 </div>
                             `
                             :

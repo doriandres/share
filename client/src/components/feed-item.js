@@ -52,7 +52,7 @@ export default class FeedItem extends connect(store)(LitElement) {
                         ${this.post.content}
                     </p>
                     <div style="text-align:center; width:100%">
-                        <img src="${`http://localhost:3000/api/image/${this.post.image}`}" style="max-width: 100%; margin-bottom: 10px">
+                        <img src="${`/api/image/${this.post.image}`}" style="max-width: 100%; margin-bottom: 10px">
                     </div>                    
                     <vaadin-horizontal-layout>
                         <vaadin-button  theme="success">Like (${this.post.likes.length})</vaadin-button>
