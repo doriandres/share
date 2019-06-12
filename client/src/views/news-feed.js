@@ -41,12 +41,12 @@ export default class NewsFeed extends connect(store)(LitElement) {
             <vaadin-horizontal-layout>
             <div style="min-width:25%"></div>
             <vaadin-vertical-layout style="min-width:50%">
+                <!-- <feed-item></feed-item>
                 <feed-item></feed-item>
                 <feed-item></feed-item>
                 <feed-item></feed-item>
                 <feed-item></feed-item>
-                <feed-item></feed-item>
-                <feed-item></feed-item>
+                <feed-item></feed-item> -->
             </vaadin-vertical-layout>
             <div style="min-width:25%"></div>
             </vaadin-horizontal-layout>
