@@ -147,6 +147,7 @@ export default class PostCreator extends connect(store)(LitElement) {
             store.dispatch(restorePostSave());
             this.removeFile();
             this.contentField.value = '';
+            this.uploadField.files = [];
         }
     }
 }
